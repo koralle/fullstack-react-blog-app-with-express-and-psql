@@ -60,8 +60,8 @@ router.delete('/api/delete/postcomments', (req, res, next) => {
   pool.query(
     `DELETE FROM comments WHERE post_id = $1`, [post_id],
     (q_err, q_res) => {
-      res.json(q_res.rows)
-      console.log(q_err)
+      res.json(q_res.rows);
+      console.log(q_err);
     });
 });
 
